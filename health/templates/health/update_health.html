@@ -1,0 +1,14 @@
+<!-- health/templates/health/update_health.html -->
+
+{% extends 'health/base.html' %}
+
+{% block title %}Update Health for {{ mother.name }}{% endblock %}
+
+{% block content %}
+<h2>Update Health Information</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update</button>
+</form>
+{% endblock %}

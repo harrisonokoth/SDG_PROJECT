@@ -1,0 +1,22 @@
+<!-- health/templates/health/dashboard.html -->
+{% extends 'health/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h2>Mothers Registered</h2>
+    <ul>
+        {% for mother in mothers %}
+            <li>{{ mother.name }} - {{ mother.phone_number }}</li>
+        {% endfor %}
+    </ul>
+    
+    {% if alerts %}
+        <div class="alert alert-warning">
+            Some mothers have overdue checkups!
+            <a href="{% url 'health_reports' %}">View Reports</a>
+        </div>
+    {% endif %}
+
+    <a href="{% url 'register_mother' %}">Register New Mother</a>
+{% endblock %}

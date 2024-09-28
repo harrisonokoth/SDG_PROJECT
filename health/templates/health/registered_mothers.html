@@ -1,0 +1,36 @@
+<!-- health/templates/health/registered_mothers.html -->
+{% extends 'health/base.html' %}
+
+{% block title %}Registered Mothers{% endblock %}
+
+{% block content %}
+<h1>Registered Mothers</h1>
+<table border="1" style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Registration Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for mother in mothers %}
+        <tr>
+            <td>{{ mother.first_name }}</td>
+            <td>{{ mother.last_name }}</td>
+            <td>{{ mother.date_of_birth }}</td>
+            <td>{{ mother.phone_number }}</td>
+            <td>{{ mother.address }}</td>
+            <td>{{ mother.registration_date }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6">No registered mothers found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

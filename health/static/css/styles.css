@@ -1,0 +1,47 @@
+/* health/static/css/styles.css */
+body {
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+h2 {
+    color: #007bff; /* Bootstrap primary color */
+}
+
+.navbar {
+    margin-bottom: 20px; /* Space below navbar */
+}
+
+.alert {
+    margin-top: 20px; /* Space above alerts */
+}
+
+.form-control {
+    border-radius: 0.25rem; /* Rounded corners for inputs */
+}
+
+button {
+    background-color: #007bff; /* Bootstrap primary button color */
+    color: white;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #343a40;
+}
+
+a {
+    color: #0b65f5; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff009d; /* Gold color on hover */
+}
